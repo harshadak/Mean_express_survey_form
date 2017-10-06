@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center; 
+        }
+        form {
+            border: 2px solid black;
+            display: block;
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input, select, textarea {
+            display: block;
+            margin-bottom: 15px;
+        }
+        div.result {
+            margin: 0 auto;
+        }
+        h4, p {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Submitted Info</h2>
+        <h4>Name: </h4>
+        <p><%= user.name_key %></p>
+        <h4>Dojo Location: </h4>
+        <p><%= user.location_key %></p>
+        <h4>Favorite Language: </h4>
+        <p><%= user.language_key %></p>
+        <h4>Comment: </h4>
+        <p><%= user.comment_key %></p>
+
+        <form action='/goBack' method='post'>
+            <input type='submit' value='Go Back'>
+        </form>
+    </div>
+</body>
+</html>
